@@ -28,6 +28,11 @@ namespace ScientificDistance
         public int[] PMIDs { get; private set; }
 
         /// <summary>
+        /// MeSH stripping option used to generate the report
+        /// </summary>
+        public MeshStrippingOption MeshStrippingOption { get; private set; }
+
+        /// <summary>
         /// Get the list of headings for a specific publication
         /// </summary>
         /// <param name="pmid">PMID of the publication</param>
@@ -87,6 +92,7 @@ namespace ScientificDistance
             Window = window;
             Setnb = setnb;
             PMIDs = publications.Keys.ToArray();
+            this.MeshStrippingOption = MeshStrippingOption.StrippedMeshTermsAllTerms;
         }
 
         /// <summary>
@@ -147,11 +153,45 @@ namespace ScientificDistance
         /// <returns>The stripped heading</returns>
         private string StripHeading(string heading)
         {
+            // Strip the heading and check if it's a main term (eg. starts with an *)
+            string strippedHeading;
+            bool isMainTerm;
             if (heading.StartsWith("*"))
-                heading = heading.Substring(1);
-            if (heading.Contains("/"))
             {
-                heading = heading.Substring(0, heading.IndexOf('/'));
+                strippedHeading = heading.Substring(1);
+                isMainTerm = true;
+            }
+            else
+            {
+                strippedHeading = heading;
+                isMainTerm = false;
+            }
+            if (strippedHeading.Contains("/"))
+            {
+                strippedHeading = strippedHeading.Substring(0, strippedHeading.IndexOf('/'));
+            }
+
+            // Return the stripped heading depending on the selected MeshStrippingOption
+            switch (MeshStrippingOption)
+            {
+                case ScientificDistance.MeshStrippingOption.StrippedMeshTermsAllTerms:
+                default:
+                    return strippedHeading;
+
+                case ScientificDistance.MeshStrippingOption.UnstrippedMeshAllTerms:
+                    return heading;
+
+                case ScientificDistance.MeshStrippingOption.StrippedMeshTermsMainTermsOnly:
+                    if (isMainTerm)
+                        return strippedHeading;
+                    else
+                        return null;
+
+                case ScientificDistance.MeshStrippingOption.UnstrippedMeshTermsMainTermsOnly:
+                    if (isMainTerm)
+                        return heading;
+                    else
+                        return null;
             }
             return heading;
         }

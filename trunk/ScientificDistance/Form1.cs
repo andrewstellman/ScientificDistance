@@ -89,17 +89,24 @@ namespace ScientificDistance
             // Retrieve the DSNs from the registry
             GetODBCDataSourceNames();
 
+            /*
             // Set the DSN dropdown listbox to its last value
             if (Application.CommonAppDataRegistry.GetValue("DSN", "").ToString().Length != 0)
             {
                 database1DSN.Text = Application.CommonAppDataRegistry.GetValue("DSN", "").ToString();
             }
+             */
 
             //// Set the people file textbox to its last value
             //if (Application.CommonAppDataRegistry.GetValue("RosterFile", "").ToString().Length != 0)
             //{
             //    RosterFile.Text = Application.CommonAppDataRegistry.GetValue("RosterFile", "").ToString();
             //}
+
+            // Set the MeSH stripping options
+            string[] options = MeshStrippingOptionUtilities.ListOptions().ToArray<string>();
+            meshStrippingOption.Items.AddRange(options);
+            meshStrippingOption.SelectedIndex = 0;
         }
 
         private void inputFileDialog_Click(object sender, EventArgs e)
