@@ -30,7 +30,7 @@ namespace ScientificDistance
         /// <summary>
         /// MeSH stripping option used to generate the report
         /// </summary>
-        public MeshStrippingOption MeshStrippingOption { get; private set; }
+        public static MeshStrippingOption MeshStrippingOption = ScientificDistance.MeshStrippingOption.StrippedMeshTermsAllTerms;
 
         /// <summary>
         /// Get the list of headings for a specific publication
@@ -52,6 +52,7 @@ namespace ScientificDistance
         /// <param name="dsn">ODBC DSN to query</param>
         /// <param name="setnb">Setnb of the scientist whose publications to find</param>
         /// <param name="window">Date window of publications</param>
+        /// <param name="meshHeadingOption">MeSH heading stripping option</param>
         public Publications(Database db, string setnb, string window, List<int> excludePMIDs)
         {
             // Make sure no parameters are null
@@ -92,7 +93,6 @@ namespace ScientificDistance
             Window = window;
             Setnb = setnb;
             PMIDs = publications.Keys.ToArray();
-            this.MeshStrippingOption = MeshStrippingOption.StrippedMeshTermsAllTerms;
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace ScientificDistance
             }
 
             // Return the stripped heading depending on the selected MeshStrippingOption
-            switch (MeshStrippingOption)
+            switch (Publications.MeshStrippingOption)
             {
                 case ScientificDistance.MeshStrippingOption.StrippedMeshTermsAllTerms:
                 default:
@@ -193,7 +193,6 @@ namespace ScientificDistance
                     else
                         return null;
             }
-            return heading;
         }
     }
 }
