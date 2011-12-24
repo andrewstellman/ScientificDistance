@@ -66,7 +66,7 @@ namespace ScientificDistance.Unit_Tests
         {
             Database DB = new Database("Scientific Distance Unit Test");
             DataTable Results = DB.ExecuteQuery("SHOW VARIABLES WHERE Variable_name = 'version'");
-            Assert.IsTrue(Results.Rows[0]["value"].ToString().StartsWith("5.0"), "The unit tests require an ODBC DSN called 'Scientific Distance Unit Test' that points to a MySQL 5.0 database");
+            Assert.IsTrue(Results.Rows[0]["value"].ToString().StartsWith("5."), "The unit tests require an ODBC DSN called 'Scientific Distance Unit Test' that points to a MySQL 5.+ database");
         }
     }
 }
