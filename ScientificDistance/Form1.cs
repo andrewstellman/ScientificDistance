@@ -150,6 +150,8 @@ namespace ScientificDistance
 
         private void generateReports_Click(object sender, EventArgs e)
         {
+            Publications.MeshStrippingOption = (MeshStrippingOption)meshStrippingOption.SelectedIndex;
+
             bool faultTolerance = false;
 
             // Make sure the input file exists
@@ -278,7 +280,6 @@ namespace ScientificDistance
             proc.StartInfo.Arguments = logFilename.Text;
             proc.Start();
         }
-
 
     }
 }
