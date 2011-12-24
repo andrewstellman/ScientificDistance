@@ -57,34 +57,37 @@
             this.rollingWindow3year = new System.Windows.Forms.RadioButton();
             this.rollingWindow5year = new System.Windows.Forms.RadioButton();
             this.excludeCommonPublications = new System.Windows.Forms.CheckBox();
+            this.meshStrippingOption = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // database1DSN
             // 
             this.database1DSN.FormattingEnabled = true;
-            this.database1DSN.Location = new System.Drawing.Point(13, 23);
-            this.database1DSN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.database1DSN.Location = new System.Drawing.Point(10, 19);
+            this.database1DSN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.database1DSN.Name = "database1DSN";
-            this.database1DSN.Size = new System.Drawing.Size(295, 24);
+            this.database1DSN.Size = new System.Drawing.Size(222, 21);
             this.database1DSN.TabIndex = 11;
             // 
             // ODBCPanel
             // 
             this.ODBCPanel.AutoEllipsis = true;
-            this.ODBCPanel.Location = new System.Drawing.Point(644, 22);
-            this.ODBCPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ODBCPanel.Location = new System.Drawing.Point(483, 18);
+            this.ODBCPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ODBCPanel.Name = "ODBCPanel";
-            this.ODBCPanel.Size = new System.Drawing.Size(21, 23);
+            this.ODBCPanel.Size = new System.Drawing.Size(16, 19);
             this.ODBCPanel.TabIndex = 18;
             this.ODBCPanel.Text = "...";
             this.ODBCPanel.Click += new System.EventHandler(this.ODBCPanel_Click);
             // 
             // Label2
             // 
-            this.Label2.Location = new System.Drawing.Point(11, 7);
+            this.Label2.Location = new System.Drawing.Point(10, 6);
+            this.Label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(216, 23);
+            this.Label2.Size = new System.Drawing.Size(162, 19);
             this.Label2.TabIndex = 10;
             this.Label2.Text = "Input Database #&1";
             // 
@@ -94,31 +97,31 @@
             // 
             // logFilename
             // 
-            this.logFilename.Location = new System.Drawing.Point(13, 270);
-            this.logFilename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logFilename.Location = new System.Drawing.Point(9, 282);
+            this.logFilename.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logFilename.Name = "logFilename";
             this.logFilename.ReadOnly = true;
-            this.logFilename.Size = new System.Drawing.Size(504, 22);
-            this.logFilename.TabIndex = 228;
+            this.logFilename.Size = new System.Drawing.Size(379, 20);
+            this.logFilename.TabIndex = 93;
             this.logFilename.TabStop = false;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(13, 252);
+            this.label12.Location = new System.Drawing.Point(10, 268);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(216, 23);
-            this.label12.TabIndex = 227;
+            this.label12.Size = new System.Drawing.Size(162, 19);
+            this.label12.TabIndex = 90;
             this.label12.Text = "&Log file";
             // 
             // OpenInNotepad
             // 
             this.OpenInNotepad.Enabled = false;
-            this.OpenInNotepad.Location = new System.Drawing.Point(524, 268);
-            this.OpenInNotepad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OpenInNotepad.Location = new System.Drawing.Point(394, 281);
             this.OpenInNotepad.Name = "OpenInNotepad";
-            this.OpenInNotepad.Size = new System.Drawing.Size(140, 25);
-            this.OpenInNotepad.TabIndex = 80;
-            this.OpenInNotepad.Text = "Open in &Notepad";
+            this.OpenInNotepad.Size = new System.Drawing.Size(105, 20);
+            this.OpenInNotepad.TabIndex = 96;
+            this.OpenInNotepad.Text = "Open in Notepad";
             this.OpenInNotepad.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.OpenInNotepad.UseVisualStyleBackColor = true;
             this.OpenInNotepad.Click += new System.EventHandler(this.OpenInNotepad_Click);
@@ -127,19 +130,18 @@
             // 
             this.log.FormattingEnabled = true;
             this.log.HorizontalScrollbar = true;
-            this.log.ItemHeight = 16;
-            this.log.Location = new System.Drawing.Point(13, 311);
-            this.log.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.log.Location = new System.Drawing.Point(9, 324);
             this.log.Name = "log";
-            this.log.Size = new System.Drawing.Size(651, 116);
-            this.log.TabIndex = 90;
+            this.log.Size = new System.Drawing.Size(489, 95);
+            this.log.TabIndex = 110;
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(13, 294);
+            this.label13.Location = new System.Drawing.Point(10, 305);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(216, 21);
-            this.label13.TabIndex = 230;
+            this.label13.Size = new System.Drawing.Size(162, 17);
+            this.label13.TabIndex = 100;
             this.label13.Text = "Log";
             // 
             // statusStrip1
@@ -148,10 +150,9 @@
             this.toolStripStatusLabel2,
             this.toolStripProgressBar1,
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 436);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 422);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(676, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(507, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 232;
             this.statusStrip1.Text = "statusStrip1";
@@ -159,44 +160,45 @@
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(55, 21);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(46, 17);
             this.toolStripStatusLabel2.Text = "Version";
             // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(133, 20);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(466, 21);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(344, 17);
             this.toolStripStatusLabel1.Spring = true;
             // 
             // database2DSN
             // 
             this.database2DSN.FormattingEnabled = true;
-            this.database2DSN.Location = new System.Drawing.Point(322, 23);
-            this.database2DSN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.database2DSN.Location = new System.Drawing.Point(242, 19);
+            this.database2DSN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.database2DSN.Name = "database2DSN";
-            this.database2DSN.Size = new System.Drawing.Size(312, 24);
+            this.database2DSN.Size = new System.Drawing.Size(235, 21);
             this.database2DSN.TabIndex = 16;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(319, 7);
+            this.label1.Location = new System.Drawing.Point(239, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 23);
+            this.label1.Size = new System.Drawing.Size(162, 19);
             this.label1.TabIndex = 15;
             this.label1.Text = "Input Database #&2";
             // 
             // generateReports
             // 
-            this.generateReports.Location = new System.Drawing.Point(579, 101);
-            this.generateReports.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generateReports.Location = new System.Drawing.Point(434, 82);
+            this.generateReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.generateReports.Name = "generateReports";
-            this.generateReports.Size = new System.Drawing.Size(86, 80);
-            this.generateReports.TabIndex = 70;
+            this.generateReports.Size = new System.Drawing.Size(64, 65);
+            this.generateReports.TabIndex = 80;
             this.generateReports.Text = "Generate Reports";
             this.generateReports.UseVisualStyleBackColor = true;
             this.generateReports.Click += new System.EventHandler(this.generateReports_Click);
@@ -204,81 +206,84 @@
             // inputFileDialog
             // 
             this.inputFileDialog.AutoEllipsis = true;
-            this.inputFileDialog.Location = new System.Drawing.Point(540, 78);
-            this.inputFileDialog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.inputFileDialog.Location = new System.Drawing.Point(405, 63);
+            this.inputFileDialog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.inputFileDialog.Name = "inputFileDialog";
-            this.inputFileDialog.Size = new System.Drawing.Size(21, 23);
+            this.inputFileDialog.Size = new System.Drawing.Size(16, 19);
             this.inputFileDialog.TabIndex = 24;
             this.inputFileDialog.Text = "...";
             this.inputFileDialog.Click += new System.EventHandler(this.inputFileDialog_Click);
             // 
             // inputFile
             // 
-            this.inputFile.Location = new System.Drawing.Point(13, 78);
-            this.inputFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.inputFile.Location = new System.Drawing.Point(10, 63);
+            this.inputFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.inputFile.Name = "inputFile";
-            this.inputFile.Size = new System.Drawing.Size(517, 22);
+            this.inputFile.Size = new System.Drawing.Size(389, 20);
             this.inputFile.TabIndex = 22;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(13, 62);
+            this.label4.Location = new System.Drawing.Point(10, 50);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 23);
+            this.label4.Size = new System.Drawing.Size(162, 19);
             this.label4.TabIndex = 20;
             this.label4.Text = "&Input file";
             // 
             // reportFileDialog
             // 
             this.reportFileDialog.AutoEllipsis = true;
-            this.reportFileDialog.Location = new System.Drawing.Point(540, 125);
-            this.reportFileDialog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reportFileDialog.Location = new System.Drawing.Point(405, 102);
+            this.reportFileDialog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reportFileDialog.Name = "reportFileDialog";
-            this.reportFileDialog.Size = new System.Drawing.Size(21, 23);
+            this.reportFileDialog.Size = new System.Drawing.Size(16, 19);
             this.reportFileDialog.TabIndex = 34;
             this.reportFileDialog.Text = "...";
             this.reportFileDialog.Click += new System.EventHandler(this.reportFileDialog_Click);
             // 
             // reportFile
             // 
-            this.reportFile.Location = new System.Drawing.Point(13, 125);
-            this.reportFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reportFile.Location = new System.Drawing.Point(10, 101);
+            this.reportFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reportFile.Name = "reportFile";
-            this.reportFile.Size = new System.Drawing.Size(517, 22);
+            this.reportFile.Size = new System.Drawing.Size(389, 20);
             this.reportFile.TabIndex = 32;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(13, 108);
+            this.label3.Location = new System.Drawing.Point(10, 88);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 23);
+            this.label3.Size = new System.Drawing.Size(162, 19);
             this.label3.TabIndex = 30;
             this.label3.Text = "&Report file";
             // 
             // meshReportFileDialog
             // 
             this.meshReportFileDialog.AutoEllipsis = true;
-            this.meshReportFileDialog.Location = new System.Drawing.Point(540, 174);
-            this.meshReportFileDialog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.meshReportFileDialog.Location = new System.Drawing.Point(405, 141);
+            this.meshReportFileDialog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.meshReportFileDialog.Name = "meshReportFileDialog";
-            this.meshReportFileDialog.Size = new System.Drawing.Size(21, 23);
+            this.meshReportFileDialog.Size = new System.Drawing.Size(16, 19);
             this.meshReportFileDialog.TabIndex = 44;
             this.meshReportFileDialog.Text = "...";
             this.meshReportFileDialog.Click += new System.EventHandler(this.meshReportFileDialog_Click);
             // 
             // meshReportFile
             // 
-            this.meshReportFile.Location = new System.Drawing.Point(13, 174);
-            this.meshReportFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.meshReportFile.Location = new System.Drawing.Point(10, 141);
+            this.meshReportFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.meshReportFile.Name = "meshReportFile";
-            this.meshReportFile.Size = new System.Drawing.Size(517, 22);
+            this.meshReportFile.Size = new System.Drawing.Size(389, 20);
             this.meshReportFile.TabIndex = 42;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(13, 157);
+            this.label5.Location = new System.Drawing.Point(10, 128);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(216, 23);
+            this.label5.Size = new System.Drawing.Size(162, 19);
             this.label5.TabIndex = 40;
             this.label5.Text = "&MeSH Headings Report file";
             // 
@@ -286,10 +291,10 @@
             // 
             this.rollingWindowNone.AutoSize = true;
             this.rollingWindowNone.Checked = true;
-            this.rollingWindowNone.Location = new System.Drawing.Point(17, 205);
-            this.rollingWindowNone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rollingWindowNone.Location = new System.Drawing.Point(13, 167);
+            this.rollingWindowNone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rollingWindowNone.Name = "rollingWindowNone";
-            this.rollingWindowNone.Size = new System.Drawing.Size(138, 21);
+            this.rollingWindowNone.Size = new System.Drawing.Size(108, 17);
             this.rollingWindowNone.TabIndex = 50;
             this.rollingWindowNone.TabStop = true;
             this.rollingWindowNone.Text = "No rolling window";
@@ -298,10 +303,10 @@
             // rollingWindow3year
             // 
             this.rollingWindow3year.AutoSize = true;
-            this.rollingWindow3year.Location = new System.Drawing.Point(205, 205);
-            this.rollingWindow3year.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rollingWindow3year.Location = new System.Drawing.Point(154, 167);
+            this.rollingWindow3year.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rollingWindow3year.Name = "rollingWindow3year";
-            this.rollingWindow3year.Size = new System.Drawing.Size(161, 21);
+            this.rollingWindow3year.Size = new System.Drawing.Size(123, 17);
             this.rollingWindow3year.TabIndex = 52;
             this.rollingWindow3year.Text = "3-year rolling window";
             this.rollingWindow3year.UseVisualStyleBackColor = true;
@@ -309,10 +314,10 @@
             // rollingWindow5year
             // 
             this.rollingWindow5year.AutoSize = true;
-            this.rollingWindow5year.Location = new System.Drawing.Point(392, 205);
-            this.rollingWindow5year.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rollingWindow5year.Location = new System.Drawing.Point(294, 167);
+            this.rollingWindow5year.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rollingWindow5year.Name = "rollingWindow5year";
-            this.rollingWindow5year.Size = new System.Drawing.Size(161, 21);
+            this.rollingWindow5year.Size = new System.Drawing.Size(123, 17);
             this.rollingWindow5year.TabIndex = 54;
             this.rollingWindow5year.Text = "5-year rolling window";
             this.rollingWindow5year.UseVisualStyleBackColor = true;
@@ -320,19 +325,39 @@
             // excludeCommonPublications
             // 
             this.excludeCommonPublications.AutoSize = true;
-            this.excludeCommonPublications.Location = new System.Drawing.Point(17, 230);
-            this.excludeCommonPublications.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.excludeCommonPublications.Location = new System.Drawing.Point(13, 189);
+            this.excludeCommonPublications.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.excludeCommonPublications.Name = "excludeCommonPublications";
-            this.excludeCommonPublications.Size = new System.Drawing.Size(349, 21);
+            this.excludeCommonPublications.Size = new System.Drawing.Size(264, 17);
             this.excludeCommonPublications.TabIndex = 60;
-            this.excludeCommonPublications.Text = "Exclude common publications for pairs of scientists";
+            this.excludeCommonPublications.Text = "&Exclude common publications for pairs of scientists";
             this.excludeCommonPublications.UseVisualStyleBackColor = true;
+            // 
+            // meshStrippingOption
+            // 
+            this.meshStrippingOption.FormattingEnabled = true;
+            this.meshStrippingOption.Location = new System.Drawing.Point(13, 224);
+            this.meshStrippingOption.Margin = new System.Windows.Forms.Padding(2);
+            this.meshStrippingOption.Name = "meshStrippingOption";
+            this.meshStrippingOption.Size = new System.Drawing.Size(386, 21);
+            this.meshStrippingOption.TabIndex = 75;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(10, 211);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(162, 19);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "MeSH &Stripping Options";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 462);
+            this.ClientSize = new System.Drawing.Size(507, 444);
+            this.Controls.Add(this.meshStrippingOption);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.excludeCommonPublications);
             this.Controls.Add(this.rollingWindow5year);
             this.Controls.Add(this.rollingWindow3year);
@@ -359,7 +384,7 @@
             this.Controls.Add(this.ODBCPanel);
             this.Controls.Add(this.Label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Scientific Distance Report";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -401,6 +426,8 @@
         private System.Windows.Forms.RadioButton rollingWindow3year;
         private System.Windows.Forms.RadioButton rollingWindow5year;
         private System.Windows.Forms.CheckBox excludeCommonPublications;
+        private System.Windows.Forms.ComboBox meshStrippingOption;
+        internal System.Windows.Forms.Label label6;
 
     }
 }
