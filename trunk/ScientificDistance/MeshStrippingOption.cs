@@ -19,7 +19,7 @@ namespace ScientificDistance
         /// <summary>
         /// Unstripped mesh terms, all terms
         /// </summary>
-        UnstrippedMeshAllTerms,
+        UnstrippedMeshTermsAllTerms,
 
         /// <summary>
         /// Stripped mesh terms, main terms only
@@ -42,7 +42,7 @@ namespace ScientificDistance
                 default:
                     return "Stripped MeSH Terms (all terms)";
 
-                case MeshStrippingOption.UnstrippedMeshAllTerms:
+                case MeshStrippingOption.UnstrippedMeshTermsAllTerms:
                     return "Unstripped MeSH Terms (all terms)";
 
                 case MeshStrippingOption.StrippedMeshTermsMainTermsOnly:
