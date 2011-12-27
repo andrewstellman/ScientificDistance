@@ -151,7 +151,7 @@ namespace ScientificDistance
         /// </summary>
         /// <param name="heading">MeSH heading to strip</param>
         /// <returns>The stripped heading</returns>
-        private string StripHeading(string heading)
+        internal static string StripHeading(string heading)
         {
             // Strip the heading and check if it's a main term (eg. starts with an *)
             string strippedHeading;
@@ -164,7 +164,15 @@ namespace ScientificDistance
             else
             {
                 strippedHeading = heading;
-                isMainTerm = false;
+                if (heading.Contains("/*"))
+                {
+                    // If a subterm starts with * it's still a main term, but there's no leading * to strip off
+                    isMainTerm = true;
+                }
+                else
+                {
+                    isMainTerm = false;
+                }
             }
             if (strippedHeading.Contains("/"))
             {
@@ -178,8 +186,8 @@ namespace ScientificDistance
                 default:
                     return strippedHeading;
 
-                case ScientificDistance.MeshStrippingOption.UnstrippedMeshAllTerms:
-                    return heading;
+                case ScientificDistance.MeshStrippingOption.UnstrippedMeshTermsAllTerms:
+                    return heading.Replace("*", "");
 
                 case ScientificDistance.MeshStrippingOption.StrippedMeshTermsMainTermsOnly:
                     if (isMainTerm)
@@ -189,7 +197,7 @@ namespace ScientificDistance
 
                 case ScientificDistance.MeshStrippingOption.UnstrippedMeshTermsMainTermsOnly:
                     if (isMainTerm)
-                        return heading;
+                        return heading.Replace("*", "");
                     else
                         return null;
             }

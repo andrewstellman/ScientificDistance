@@ -121,6 +121,7 @@
     <Compile Include="Unit Tests\FaultToleranceTest.cs" />
     <Compile Include="Unit Tests\InputFileTest.cs" />
     <Compile Include="Unit Tests\MeSHHeadingsReportTest.cs" />
+    <Compile Include="Unit Tests\MeSHStrippingTest.cs" />
     <Compile Include="Unit Tests\ReportRowTests.cs" />
     <Compile Include="Unit Tests\TestDatabase.cs" />
     <Compile Include="Unit Tests\TestEnvironment.cs" />
